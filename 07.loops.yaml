@@ -5,7 +5,7 @@
   tasks:
   - name: install packages through loops
     ansible.builtin.yum:
-      name: "{{item}}"
+    - name: "{{item}}"
       state: present
     loops:
     - tree
