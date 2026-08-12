@@ -5,3 +5,6 @@
   - name: running command
     ansible.builtin.command: id roboshop
     register: output
+  - name: print exit status
+    ansible.builtin.debug:
+      msg: "Output is: {{output.rc}}"
