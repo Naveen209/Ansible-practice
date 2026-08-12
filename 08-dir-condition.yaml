@@ -10,5 +10,9 @@
   - name: print exit status
     ansible.builtin.debug:
       msg: "{{output.stat.exists}}"
+    when: output.stat.exists != true
+  - name: "Creating  /app"
+    ansible.builtin.command: mkdir /root/app/
+
 
 
