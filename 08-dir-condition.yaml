@@ -1,0 +1,11 @@
+- name: Creating directory /app
+  hosts: web
+  connection: ssh
+  become: yes
+  tasks:
+  - name: checking dir exist or not
+    ansible.builtin.stat:
+      path: /root/app
+      register: output
+      
+
