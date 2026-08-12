@@ -12,7 +12,9 @@
       msg: "{{output.stat.exists}}"
     when: output.stat.exists != true
   - name: "Creating  /app"
-    ansible.builtin.command: mkdir /root/app
+    ansible.builtin.fi/root/apple:
+      path: /root/app
+      state: directory
   - name: "Print message"
     ansible.builtin.debug:
       msg: "Created /app directory"
