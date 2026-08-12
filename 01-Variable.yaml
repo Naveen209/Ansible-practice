@@ -7,5 +7,5 @@
     COURSE: "DevOps"
   tasks:
   - name: Getting details
-    ansible.builtin.yaml:
+    ansible.builtin.debug:
     msg: "My Name is {{NAME}} age is {{AGE}} learning {{DEVOPS}} Course"
