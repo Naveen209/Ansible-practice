@@ -5,9 +5,10 @@
   tasks:
   - name: install packages through loops
     ansible.builtin.yum:
-      name: "{{item}}"
-      state: present
+      name: "{{item.name}}"
+      state: "{{ite.state}}"
     loop:
-    - tree
-    - nginx
-    - nodejs
+    - {name: tree , state: absent}
+    - {name: nginx , state: absent}
+    - {name: nodejs , state: absent}
+    - {name: postfix , state: present}
