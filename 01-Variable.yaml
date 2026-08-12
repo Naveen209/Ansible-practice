@@ -1,0 +1,11 @@
+- name: practicing vairables
+  hosts: localhost
+  connection: ssh
+  vars:
+    NAME: "Naveen"
+    AGE: "27"
+    COURSE: "DevOps"
+  tasks:
+  - name: Getting details
+    ansible.builtin.yaml:
+    msg: "My Name is {{NAME}} age is {{AGE}} learning {{DEVOPS}} Course"
