@@ -1,4 +1,4 @@
-- node: Variable files
+- name: Variable files
   hosts: web
   connection: ssh
   vars_files:
