@@ -6,6 +6,6 @@
   - name: checking dir exist or not
     ansible.builtin.stat:
       path: /root/app
-      register: output
-      
+    register: output
+
 
