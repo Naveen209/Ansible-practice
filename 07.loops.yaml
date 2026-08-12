@@ -6,7 +6,7 @@
   - name: install packages through loops
     ansible.builtin.yum:
       name: "{{item.name}}"
-      state: "{{ite.state}}"
+      state: "{{item.state}}"
     loop:
     - {name: 'tree' , state: 'absent'}
     - {name: nginx , state: absent}
