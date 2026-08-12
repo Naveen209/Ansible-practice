@@ -1,0 +1,7 @@
+- name: practicing vairables
+  hosts: web
+  connection: ssh
+  tasks:
+  - name: Getting details
+    ansible.builtin.debug:
+      msg: "My Name is {{NAME}} age is {{AGE}} studied {{DEGREE}} Course"
