@@ -9,6 +9,6 @@
     register: output
   - name: print exit status
     ansible.builtin.debug:
-      msg: {{output.stat.exists}}
+      msg: "{{output.stat.exists}}""
 
 
