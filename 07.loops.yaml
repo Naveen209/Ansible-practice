@@ -8,7 +8,7 @@
       name: "{{item.name}}"
       state: "{{ite.state}}"
     loop:
-    - {name: tree , state: absent}
+    - {name: 'tree' , state: 'absent'}
     - {name: nginx , state: absent}
     - {name: nodejs , state: absent}
     - {name: postfix , state: present}
