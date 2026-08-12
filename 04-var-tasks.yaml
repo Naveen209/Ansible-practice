@@ -1,0 +1,17 @@
+- name: practicing vairables
+  hosts: web
+  connection: ssh
+  vars:
+    NAME: "Naveen"
+    AGE: "27"
+    COURSE: "DevOps"
+  tasks:
+  - name: Getting details
+    ansible.builtin.debug:
+      msg: "My Name is {{NAME}} age is {{AGE}} learning {{COURSE}} Course"
+  - name: getting changed details
+    vars:
+      AGE: "28"
+      COURSE: "DevSecOps"
+    ansible.builtin.debug:
+      msg: "My Name is {{NAME}} age is {{AGE}} learning {{COURSE}} Course"
