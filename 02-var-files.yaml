@@ -1,0 +1,9 @@
+- node: Variable files
+  hosts: web
+  connection: ssh
+  vars_files:
+  - vars.yaml
+  tasks:
+  - name: Print details
+    ansible.builtin.debug:
+      msg: "Name is {{NAME}},Age is {{AGE}},studied {{DEGREE}}"
