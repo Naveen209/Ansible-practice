@@ -1,0 +1,13 @@
+- name: installing packages
+  hosts: web
+  connection: ssh
+  become: yes
+  tasks:
+  - name: install packages through loops
+    ansible.builtin.yum:
+      name: "{{item}}"
+      state: present
+    loops:
+    - tree
+    - nginx
+    - mailx
