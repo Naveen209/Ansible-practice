@@ -1,0 +1,14 @@
+- name: using promt vairables
+  connection: ssh
+  hosts: web
+  vars_prompt:
+  - name: USERNAME
+    prompt: " Please enter your username: "
+    private: false
+  - name: PASSWORD
+    prompt: " Please enter your password: "
+    private: true
+  tasks:
+  - name: "Print prompts"
+    ansible.builtin.debug:
+      msg: " {{USERNAME}} {{PASSWORD}}"
