@@ -1,0 +1,7 @@
+- name: To check user exists or not
+  hosts: web
+  connection: ssh
+  tasks:
+  - name: running command
+    ansible.builtin.command: id roboshop
+    register: output
