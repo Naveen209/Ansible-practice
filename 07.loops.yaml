@@ -10,4 +10,4 @@
     loop:
     - tree
     - nginx
-    - mailx
+    - nodejs
